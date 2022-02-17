@@ -1,31 +1,30 @@
 import 'package:flutter/material.dart';
 
-class BMIResultScreen extends StatelessWidget
-{
+class BMIResultScreen extends StatelessWidget {
   final int result;
   final bool isMale;
   final int age;
 
-  BMIResultScreen({
+  const BMIResultScreen({
+    Key? key,
     required this.result,
     required this.age,
     required this.isMale,
-  });
+  }) : super(key: key);
 
-  override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: ()
-          {
+          onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.keyboard_arrow_left,
           ),
         ),
-        title: Text(
+        title: const Text(
           'BMI Result',
         ),
       ),
@@ -35,21 +34,21 @@ class BMIResultScreen extends StatelessWidget
           children: [
             Text(
               'Gender : ${isMale ? 'Male' : 'Female'}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
               'Result : $result',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
               'Age : $age',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.bold,
               ),
