@@ -6,14 +6,14 @@ class UserModel {
   final String phone;
 
   UserModel({
-    @required this.id,
-    @required this.phone,
-    @required this.name,
+    required this.id,
+    required this.phone,
+    required this.name,
   });
 }
 
 class UsersScreen extends StatelessWidget {
-  List<UserModel> users = [
+  final List<UserModel> users = [
     UserModel(
       id: 1,
       name: 'Abdullah Mansour',
@@ -75,6 +75,8 @@ class UsersScreen extends StatelessWidget {
       phone: '+2087856136',
     ),
   ];
+
+  const UsersScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
