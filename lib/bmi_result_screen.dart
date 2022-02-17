@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class BMIResultScreen extends StatelessWidget {
+class BMIResultScreen extends StatelessWidget
+{
   final int result;
   final bool isMale;
   final int age;
 
   BMIResultScreen({
-    required this.result,
-    required this.age,
-    required this.isMale,
+    @required this.result,
+    @required this.age,
+    @required this.isMale,
   });
 
   @override
@@ -16,7 +17,8 @@ class BMIResultScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {
+          onPressed: ()
+          {
             Navigator.pop(context);
           },
           icon: Icon(
