@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:udemy_flutter/bmi_screen.dart';
-import 'package:udemy_flutter/counter_screen.dart';
-import 'package:udemy_flutter/login_screen.dart';
-import 'package:udemy_flutter/messenger_screen.dart';
-import 'package:udemy_flutter/users_screen.dart';
+import 'bmi_screen.dart';
 
-void main()
-{
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 // Stateless
@@ -15,14 +10,14 @@ void main()
 
 // class MyApp
 
-class MyApp extends StatelessWidget
-{
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // constructor
   // build
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: BmiScreen(),
